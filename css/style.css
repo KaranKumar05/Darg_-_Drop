@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+  background: url(../images/bg.jpg);
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+.parent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 16px;
+  overflow: scroll;
+  height: 100%;
+}
+
+.heading {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  border-bottom: 2px solid black;
+  padding: 5px;
+}
+
+#form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#form input{
+  width: 70%;
+  padding: 10px;
+  border: none;
+  font-size: 1.1em;
+  border-radius: 5px 0 0 5px;
+}
+#form button{
+  padding: 10px;
+  font-size: 1.1em;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  width: 30%;
+  border-radius: 0 5px 5px 0;
+}
+.dragDrop {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #e7e5e5;
+  padding: 20px;
+  border-radius: 4px;
+  width: 325px;
+  border-radius: 10px;
+}
+
+.task {
+  background: white;
+  color: black;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: move;
+}
+
+@media (max-width:1041px) {
+  .dragDrop {
+    width: 250px;
+  }
+  .task {
+    font-size: 16px;
+  }
+  #form input{
+    width: 70%;
+    font-size: 1em;
+  }
+  #form button{
+    padding: 10px 5px;
+    font-size: 1em;
+  }
+}
+@media (max-width:819px) {
+.parent {
+  flex-direction: column;
+  overflow:unset;
+}
+.dragDrop {
+  width: 400px;
+}
+}
+@media (max-width:518px) {
+.dragDrop {
+  width: 350px;
+}
+}
+@media (max-width:434px) {
+.dragDrop {
+  width: 300px;
+}
+}
+@media (max-width:361px) {
+.dragDrop {
+  width: 250px;
+}
+}
+
+
